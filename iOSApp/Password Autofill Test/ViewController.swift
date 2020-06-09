@@ -6,44 +6,17 @@
 //  Copyright © 2020 Basem Emara. All rights reserved.
 //
 
-import AuthenticationServices
 import UIKit
 
 class ViewController: UIViewController {
-    private let callbackURLScheme = "customscheme"
-}
-
-private extension ViewController {
+    static let callbackURLScheme = "customscheme"
     
-    @IBAction func didTapLoginButton() {
-        let session = ASWebAuthenticationSession(
-            url: URL(string: "https://zamzam.io/tests/autofill/login.html?callback_url_scheme=\(callbackURLScheme)")!,
-            callbackURLScheme: callbackURLScheme) {
-                print($0, $1)
-        }
-        
-        session.prefersEphemeralWebBrowserSession = true
-        session.presentationContextProvider = self
-        session.start()
-    }
+    lazy var loginURL = URL(string: "https://zamzam.io/tests/autofill/login.html?callback_url_scheme=\(Self.callbackURLScheme)")!
+    lazy var signupURL = URL(string: "https://zamzam.io/tests/autofill/signup.html?callback_url_scheme=\(Self.callbackURLScheme)")!
     
-    @IBAction func didTapSignupButton() {
-        let session = ASWebAuthenticationSession(
-            url: URL(string: "https://zamzam.io/tests/autofill/signup.html?callback_url_scheme=\(callbackURLScheme)")!,
-            callbackURLScheme: callbackURLScheme) {
-                print($0, $1)
-        }
-        
-        session.prefersEphemeralWebBrowserSession = true
-        session.presentationContextProvider = self
-        session.start()
-    }
-}
-
-extension ViewController: ASWebAuthenticationPresentationContextProviding {
+    /// For `ASWebAuthenticationSession` implementation, see:
+    /// `ViewController+ASWebAuthenticationSession.swift`
     
-    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        view.window!
-    }
+    /// For `SafariServices` implementation, see:
+    /// `ViewController+Safari.swift`
 }
-

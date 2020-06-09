@@ -16,20 +16,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-l5-0fM">
-                                <rect key="frame" x="183" y="418" width="48" height="60"/>
+                                <rect key="frame" x="74.5" y="388" width="265" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phS-Vi-Qpp">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
-                                        <state key="normal" title="Login"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="30"/>
+                                        <state key="normal" title="Login (ASWebAuthenticationSession)"/>
                                         <connections>
-                                            <action selector="didTapLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="nyw-hW-ZoN"/>
+                                            <action selector="didTapLoginASWebAuthenticationSessionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="EED-Lj-8C1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45v-BR-ysR">
-                                        <rect key="frame" x="0.0" y="30" width="48" height="30"/>
-                                        <state key="normal" title="Signup"/>
+                                        <rect key="frame" x="0.0" y="30" width="265" height="30"/>
+                                        <state key="normal" title="Signup (ASWebAuthenticationSession)"/>
                                         <connections>
-                                            <action selector="didTapSignupButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="DrG-x9-pPM"/>
+                                            <action selector="didTapSignupASWebAuthenticationSessionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqh-NB-qhv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5B-QQ-AR0">
+                                        <rect key="frame" x="0.0" y="60" width="265" height="30"/>
+                                        <state key="normal" title="Login (Safari)"/>
+                                        <connections>
+                                            <action selector="didTapLoginSafariButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="7TB-Mo-8fn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07G-Rr-2SZ">
+                                        <rect key="frame" x="0.0" y="90" width="265" height="30"/>
+                                        <state key="normal" title="Signup (Safari)"/>
+                                        <connections>
+                                            <action selector="didTapSignupSafariButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9iH-CU-coO"/>
                                         </connections>
                                     </button>
                                 </subviews>

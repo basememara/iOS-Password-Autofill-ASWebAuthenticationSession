@@ -13,6 +13,8 @@
 		8B421355247C195900958FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B421353247C195900958FE3 /* Main.storyboard */; };
 		8B421357247C195B00958FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B421356247C195B00958FE3 /* Assets.xcassets */; };
 		8B42135A247C195B00958FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B421358247C195B00958FE3 /* LaunchScreen.storyboard */; };
+		8B4EEC2C248FCA4400794F15 /* ViewController+ASWebAuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EEC2B248FCA4400794F15 /* ViewController+ASWebAuthenticationSession.swift */; };
+		8B4EEC2E248FCA5500794F15 /* ViewController+Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4EEC2D248FCA5500794F15 /* ViewController+Safari.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,12 @@
 		8B421356247C195B00958FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B421359247C195B00958FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B42135B247C195B00958FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4EEC2B248FCA4400794F15 /* ViewController+ASWebAuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ASWebAuthenticationSession.swift"; sourceTree = "<group>"; };
+		8B4EEC2D248FCA5500794F15 /* ViewController+Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Safari.swift"; sourceTree = "<group>"; };
+		8B4EEC30248FCD4100794F15 /* login.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		8B4EEC31248FCD4100794F15 /* redirect.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = redirect.html; sourceTree = "<group>"; };
+		8B4EEC32248FCD4100794F15 /* signup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = signup.html; sourceTree = "<group>"; };
+		8B4EEC33248FE26C00794F15 /* success.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = success.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				8B42134C247C195900958FE3 /* Password Autofill Test */,
+				8B4EEC2F248FCD4100794F15 /* Website */,
 				8B42134B247C195900958FE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,12 +68,26 @@
 				8B42134D247C195900958FE3 /* AppDelegate.swift */,
 				8B42134F247C195900958FE3 /* SceneDelegate.swift */,
 				8B421351247C195900958FE3 /* ViewController.swift */,
+				8B4EEC2B248FCA4400794F15 /* ViewController+ASWebAuthenticationSession.swift */,
+				8B4EEC2D248FCA5500794F15 /* ViewController+Safari.swift */,
 				8B421353247C195900958FE3 /* Main.storyboard */,
 				8B421356247C195B00958FE3 /* Assets.xcassets */,
 				8B421358247C195B00958FE3 /* LaunchScreen.storyboard */,
 				8B42135B247C195B00958FE3 /* Info.plist */,
 			);
 			path = "Password Autofill Test";
+			sourceTree = "<group>";
+		};
+		8B4EEC2F248FCD4100794F15 /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				8B4EEC30248FCD4100794F15 /* login.html */,
+				8B4EEC31248FCD4100794F15 /* redirect.html */,
+				8B4EEC32248FCD4100794F15 /* signup.html */,
+				8B4EEC33248FE26C00794F15 /* success.php */,
+			);
+			name = Website;
+			path = ../Website;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4EEC2E248FCA5500794F15 /* ViewController+Safari.swift in Sources */,
 				8B421352247C195900958FE3 /* ViewController.swift in Sources */,
 				8B42134E247C195900958FE3 /* AppDelegate.swift in Sources */,
+				8B4EEC2C248FCA4400794F15 /* ViewController+ASWebAuthenticationSession.swift in Sources */,
 				8B421350247C195900958FE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
