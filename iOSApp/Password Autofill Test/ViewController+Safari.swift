@@ -51,6 +51,8 @@ private extension ViewController {
         
         guard let url = notification.object as? URL else { return }
         print("Safari: \(url)")
+        
+        // TODO: How to dismiss only after password dialog is dismissed (if shown)
         dismiss(animated: true)
     }
 }
