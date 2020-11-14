@@ -1,45 +1,45 @@
 <!doctype html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
-        <title>The Password Autofill Test: Login</title>
-    </head>
-    
-    <body>
-        <form id="login-form" onsubmit="return false;">
-            <ul>
-                <li>
-                    <label for="user-text-field">Username:</label>
-                    <input id="user-text-field" type="email" autocomplete="username"/>
-                </li>
-                <li>
-                    <label for="password-text-field">Password:</label>
-                    <input id="password-text-field" type="password" autocomplete="current-password"/>
-                </li>
-                <li>
-                    <button type="submit" onclick="formSubmit(); return false;">Login</button>
-                </li>
-            </ul>
-        </form>
-        <script>
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const callbackURLScheme = urlParams.get('callback_url_scheme')
-            
-            let form = document.getElementById('login-form')
-            var url = 'success.php'
-            
-            if (callbackURLScheme) {
-                url += '?redirect=' + callbackURLScheme
-            }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+  <title>The Password Autofill Test: Login</title>
+</head>
+
+<body>
+    <form id="login-form" onsubmit="return false;">
+        <ul>
+            <li>
+                <label for="user-text-field">Username:</label>
+                <input id="user-text-field" type="email" autocomplete="username"/>
+            </li>
+            <li>
+                <label for="password-text-field">Password:</label>
+                <input id="password-text-field" type="password" autocomplete="current-password"/>
+            </li>
+            <li>
+                <button type="submit" onclick="formSubmit(); return false;">Login</button>
+            </li>
+        </ul>
+    </form>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const callbackURLScheme = urlParams.get('callback_url_scheme')
         
-            function formSubmit() {
-                form.action = url
-                form.method = 'POST'
-                form.submit()
-            }
-        </script>
-    </body>
+        let form = document.getElementById('login-form')
+        var url = 'success.php'
+
+        if (callbackURLScheme) {
+            url += '?redirect=' + callbackURLScheme
+        }
+    
+        function formSubmit() {
+            form.action = url
+            form.method = 'POST'
+            form.submit()
+        }
+    </script>
+</body>
 </html>
