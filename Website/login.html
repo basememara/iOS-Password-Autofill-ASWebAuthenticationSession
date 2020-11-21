@@ -29,6 +29,7 @@
         const callbackURLScheme = urlParams.get('callback_url_scheme')
         
         let form = document.getElementById('login-form')
+        let password = document.getElementById('password-text-field')
         var url = 'success.php'
 
         if (callbackURLScheme) {
@@ -37,7 +38,7 @@
     
         function formSubmit() {
             form.action = url
-            form.method = 'POST'
+            password.autocomplete = "new-password"
             form.submit()
         }
     </script>
